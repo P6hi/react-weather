@@ -29,7 +29,7 @@ const App = () => {
 }
 
 const DisplayCountries = ({searchedCountries}) => {
-  if (searchedCountries.length > 0 && searchedCountries.length < 10) {
+  if (searchedCountries.length > 0 && searchedCountries.length < 20) {
     return searchedCountries.map(country => <div key={country.ccn3}>{country.name.official} {country.flag}</div>)
   }
 }
