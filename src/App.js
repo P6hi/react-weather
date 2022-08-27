@@ -29,6 +29,14 @@ const App = () => {
 }
 
 const DisplayCountries = ({searchedCountries}) => {
+  if (searchedCountries.length === 0) {
+    return <div>Please enter the name of the country</div>
+  }
+
+  if (searchedCountries.length > 20) {
+    return <div>Too many results! Please be more specific...</div>
+  }
+
   if (searchedCountries.length > 0 && searchedCountries.length < 20) {
     return searchedCountries.map(country => <div key={country.ccn3}>{country.name.official} {country.flag}</div>)
   }
